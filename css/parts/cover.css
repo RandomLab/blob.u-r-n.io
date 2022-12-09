@@ -1,0 +1,124 @@
+/* COVER PAGE ---------------------------------------------------------------------- */
+/* layout -------------------------------------------------------------------------- */
+
+@page :first {
+    /* background-color: #a6a6b3; */
+    margin-top: 0mm;
+    margin-bottom: 0mm;
+    margin-left: 0mm;
+    margin-right: 0mm;
+    color: black;
+    @top-right-corner { content: none; }
+    @top-right{ content: none; }
+}
+
+#page-1 .pagedjs_page_content > div{
+  height: 100%;
+}
+
+#page-1 .pagedjs_page_content {
+  display: flex;
+}
+#cover h1{
+  margin: auto;
+  font-weight: lighter;
+  text-transform: none;
+  font-size: 50pt;
+  line-height: 50pt;
+  margin-top: 25.539mm;
+  -webkit-text-stroke-width: 1.2px;
+  /*color: white;*/
+}
+
+#cover .blob{
+
+}
+#cover h2{
+  text-transform: none;
+  color: white;
+  font-size: 20pt;
+  -webkit-text-stroke-width: 1.2px;
+  font-weight: normal;
+  margin-top: 80mm;
+}
+
+#cover .container{
+  height: 100%;
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+
+#cover .content{
+  margin: auto;
+  width: 100%;
+  margin-top: 14.3mm;
+  margin-left: 90px;
+  margin-right: 14.5mm;
+  margin-bottom: 68px;
+  /*border: solid 0.7mm;*/
+}
+
+#cover header{
+  height: 90.8mm;
+}
+
+#cover header .container{
+  /*background: black;*/
+  /*color: white;*/
+  /*z-index: 10;*/
+  position: relative;
+}
+
+#cover header .content{
+  display: flex;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+#cover main{
+ height: calc(100% - 94mm + 3.2mm);
+}
+
+#cover main .container{
+
+  /*box-shadow: inset 0 1.5em 1em -1em black;*/
+  background: white;
+}
+
+#cover main .content{
+  border-top: none;
+  margin-top: 0;
+}
+
+#cover footer{
+  position: absolute;
+  bottom: 15px;
+  right: 54px;
+}
+
+/* positioning in relation to the page */
+#author {
+    position: absolute;
+    bottom: 0;
+}
+
+#title {
+    position: absolute;
+    bottom: 60mm;
+    z-index: 1;
+}
+
+
+
+/* COVER PAGE ---------------------------------------------------------------------- */
+/* style --------------------------------------------------------------------------- */
+
+#author{
+    font-size: 1.5rem;
+    line-height: calc(var(--baseline)*2);
+}
+
+
+#halftitle

@@ -1,0 +1,104 @@
+.interview blockquote{
+  font-weight: bold;
+  margin-left: 0;
+  margin-right:0;
+}
+
+.interview blockquote > p > em{
+  -webkit-text-stroke-width: 0.9px;
+  -webkit-text-stroke-color: black;
+  color: white;
+  font-style: italic;
+}
+
+
+.interview p, .interview li{
+  font-family: "SpaceMonoCustom";
+  font-style: italic;
+  word-spacing: -3.6px;
+  font-weight: normal;
+  hyphens: none;
+  text-align: left;
+  font-size: 10pt;
+  text-indent: 0;
+}
+
+.interview > p em{
+  font-family: "SpaceMonoCustom";
+  font-style: normal;
+  word-spacing: -3.6px;
+  font-weight: normal;
+  hyphens: none;
+  text-align: left;
+  font-size: 10pt;
+}
+
+.interview blockquote > p{
+  font-family: "Inknut Antiqua";
+  font-weight: bold;
+  color: black;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: white;
+  font-size: 15pt;
+  /*text-transform: uppercase;*/
+  font-style: normal;
+  word-spacing: normal;
+  text-align: center;
+  /*counter-increment: countbailey;*/
+  page-break-inside: avoid;
+}
+/*
+.interview h2{
+  counter-reset: countbailey;
+}*/
+/*
+section[data-id="conversation-avec-jeremy-bailey"] blockquote > p::before{
+  content: counter(countbailey) ".";
+  position: absolute;
+  left: -36px;
+}*/
+
+section[data-id="mark,-le-bleu-;-discussion-avec-marion-balac"] blockquote + p{
+  word-spacing: -4px!important;
+  letter-spacing: -0.07px!important;
+}
+
+img[src="/images/Mark.jpg"]{
+  object-fit: contain;
+}
+
+section[data-id="conversation-avec-jeremy-bailey"] .introduction > p {
+  text-align: left;
+  position: relative;
+}
+
+section[data-id="conversation-avec-an-mertens"] h2{
+  margin-left: 1.3em;
+  margin-right: 1.3em;
+}
+
+.interview .introduction{
+  position: absolute;
+  bottom: 0;
+}
+
+.introduction *:last-child{
+  margin-bottom: 0;
+}
+
+.interview .introduction > h6, .interview .introduction > *{
+  text-indent: 0;
+  hyphens: none;
+  text-align: center;
+}
+
+.interview .introduction blockquote{
+  margin-bottom: var(--lineheight);
+}
+
+.note a{
+  display: inline-block;
+  box-shadow: black 1px 1px;
+  word-break: break-all;
+  hyphens: none;
+}

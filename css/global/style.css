@@ -1,0 +1,508 @@
+/* Style not specific to paged.js -----------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------- */
+
+:root {
+    --lineheight: 18px;
+}
+
+.runningTitle{
+  display: none;
+}
+
+* {
+    /*line-height: 22px;*/
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+
+ul{
+  margin-bottom: var(--lineheight);
+  margin-top: 0;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+del {
+  text-decoration: line-through double black;
+}
+
+/*.subchapter p{
+  white-space: pre-wrap;
+}*/
+
+/* img {
+    width: 100%;
+} */
+
+#note-liminaire{
+  /*height: 100%;*/
+}
+
+#note-liminaire >h2{
+  display: none;
+}
+
+#note-liminaire > p{
+  font-size: 13.5pt;
+  color: black;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: white;
+  font-weight: lighter;
+  line-height: var(--lineheight);
+}
+
+#note-liminaire > p > code{
+  line-height: 0;
+  font-family: "Inknut Antiqua";
+  color: white;
+  font-size: 18pt;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: black;
+}
+
+#signature{
+  font-size: 0;
+  position: absolute;
+  display: none;
+  page-break-before: avoid;
+}
+
+section[data-page-number="88"] .pagedjs_page_content p{
+  word-spacing: -4px;
+  letter-spacing: -0.07px;
+}
+
+.hack-de-la-mort{
+  word-spacing: -4px!important;
+  letter-spacing: -0.07px!important;
+}
+
+section[data-id="coco’s-memories"] h6{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+/* counter */
+
+body {
+    counter-reset: chapter;
+    counter-reset: countbailey;
+}
+
+.chapter h1 {
+    counter-increment: chapter;
+}
+
+
+/* .chapter h1::before {
+  content: counter(chapter, decimal);
+  font-weight: normal;
+} */
+
+
+/* .chapter h1::before{
+    font-size: 2rem;
+    line-height: 0;
+    padding-right: var(--baseline);
+} */
+
+
+/* TEXT ---------------------------------------------------- */
+
+p, h6, li {
+    text-align: left;
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    /*font-style: italic;*/
+    font-size: 9pt;
+    line-height: var(--lineheight);
+    margin-bottom: var(--lineheight);
+}
+/*
+.subchapter > p {
+  white-space: pre-line;
+}*/
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+blockquote + p{
+  text-indent: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: 15pt;
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    hyphens: none;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: var(--lineheight);
+    margin-bottom: var(--lineheight);
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+
+    /* line-height: var(--baseline) - 1; */
+}
+
+
+
+h1,
+h2{
+  -webkit-text-stroke-width: 0.9px;
+  -webkit-text-stroke-color: black;
+  /*text-shadow: 0px 0px 1px black ;*/
+  color: white;
+  font-size: 20pt;
+}
+
+
+h3{
+  -webkit-text-stroke-width: 0px;
+}
+
+/* HACK:  */
+@-moz-document url-prefix(){
+  h1,h2,h3,h4, .interview blockquote{
+    letter-spacing: -1px;
+  }
+  .zocco code{
+    line-height: 11.1pt!important;
+  }
+
+  #conversation-avec-jeremy-bailey{
+    margin-bottom: calc(var(--lineheight) * -1);
+  }
+  #Éditorial > p {
+    font-weight: normal;
+    font-size: 13pt;
+  }
+  section[data-id="toc"] li{
+  }
+  .toc-authors{
+    position: absolute;
+    right: 0;
+  }
+  @media print {
+    h1,h2,h3,h4{
+      font-weight: normal;
+    }
+  }
+}
+
+pre, code{
+  font-family: "SpaceMonoCustom";
+  font-style: italic;
+  word-spacing: -3.6px;
+  font-weight: normal;
+  hyphens: auto;
+  text-align: center;
+  font-size: 10pt;
+  line-height: var(--lineheight);
+  margin-bottom: var(--lineheight);
+}
+
+pre, code{
+  text-align: left;
+  white-space: pre-line;
+  text-indent: 0;
+}
+
+pre ~ pre{
+  margin-bottom: 0;
+}
+
+h6 em, pre em{
+  /*font-style: normal;*/
+  font-weight: bold;
+  hyphens: none;
+}
+
+* em, * strong{
+  /*
+  font-style: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  */
+}
+
+.note_call{
+    vertical-align: super;
+    line-height: 0;
+    font-family: "SpaceMonoCustom";
+    font-size: 7pt;
+
+}
+
+a {
+    /*font-family: 'Work Sans', sans-serif;*/
+    /* font-size: 1rem; */
+    /* text-decoration: underline; */
+}
+
+figure{
+  text-indent: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.logo img {
+    width: 50%;
+    /* padding: 3%; */
+    margin-top: 6mm;
+    margin-bottom: 6mm;
+    margin-left: 8mm;
+    filter: grayscale(100%);
+}
+
+img{
+  object-fit: cover;
+}
+
+figure > img {
+    width: 100%;
+    height: auto;
+}
+
+.tooHeight{
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+img[alt=adapt] {
+    height: var(--height);
+    width: var(--width);
+    object-fit: contain;
+    position: absolute;
+    top: calc(var(--margin-top)*-1);
+    left: calc(var(--margin-left)*-1);
+    z-index: 0;
+}
+
+img[alt=full] {
+    height: var(--height);
+    width: var(--width);
+    object-fit: contain;
+    position: absolute;
+    top: calc(var(--margin-top)*-1);
+    left: calc(var(--margin-left)*-1);
+    z-index: 0;
+}
+
+
+/* blockquote and list */
+blockquote > p{
+  margin-left: var(--lineheight);
+  margin-right: var(--lineheight);
+}
+
+blockquote, blockquote p{
+  text-indent: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* specific style */
+
+
+.colophon{
+  column-count: 2;
+  column-fill: auto;
+  height: 100%;
+}
+
+.colophon-right{
+  text-align: right;
+}
+
+.stroke{
+  color: white!important;
+  -webkit-text-stroke-width:1px!important;
+  -webkit-text-stroke-color:black!important;
+
+}
+
+.colophon p {
+  white-space: pre-line;
+  text-indent: 0;
+  font-size: 13.5pt;
+  hyphens: none;
+  color: black;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: white;
+  font-weight: bold;
+  line-height: var(--lineheight);
+}
+
+table{
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  page-break-inside: auto;
+}
+tr{
+  border-bottom: 1px solid black;
+  page-break-inside: avoid;
+}
+th{
+  font-weight: normal;
+  font-size: 7pt;
+  font-family: "SpaceMonoCustom";
+  word-spacing: -1px;
+  line-height: 8pt;
+  padding: 3px;
+}
+
+.blague {
+  margin-top: 180mm;
+}
+.blague *{
+  margin-bottom: 0;
+  font-family: "spacemonocustom";
+  text-align: center;
+}
+
+.decoration{
+  display: block;
+  text-align: center;
+  text-indent: 0;
+  width: 100%;
+  height: var(--lineheight);
+  font-size: 15pt;
+  font-family: 'Inknut Antiqua', sans-serif;
+  font-weight: bold;
+  line-height: var(--lineheight);
+  -webkit-text-stroke-width: 0.9px;
+  -webkit-text-stroke-color: black;
+  color: white;
+}
+
+section[data-id="la-mort-du-soleil"] p {
+  text-indent: 0;
+}
+
+section[data-id="percy,-brain-he-has-~~nix~~-now"] a{
+  word-break: break-all;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+section[data-id="percy,-brain-he-has-~~nix~~-now"] h2{
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+section[data-id="gurb"] img{
+  width: 100%;
+  height: auto;
+  page-break-before: always;
+}
+
+.zocco pre, .zocco code{
+  text-align: right;
+  font-family: "Roboto";
+  font-weight: 350;
+  line-height: normal;
+  font-size: 10pt;
+  font-style: normal;
+  width: 100%;
+}
+
+.authors{
+width: 100% !important;
+margin-left: 0!important;
+margin-right: 0!important;
+margin-bottom: var(--lineheight);
+/*box-shadow: 0px var(--lineheight) 0px -8.5px black;*/
+}
+.author{
+  font-style: normal;
+  font-weight: normal;
+  line-height: var(--lineheight);
+  display: flex;
+  justify-content: space-around;
+  font-family: "SpaceMonoCustom";
+  /* font-size: 10.5pt; */
+  text-align: center;
+}
+
+hr{
+  margin-bottom: calc(var(--lineheight) - 1px);
+  margin-top: -3px;
+  border: 0;
+  border-bottom: 2px solid;
+  /*position: absolute;*/
+}
+
+.no-break{
+  page-break-inside: avoid;
+}
+
+.notes{
+  position: absolute;
+  height: fit-content;
+}
+
+.notes .note:last-child, .notesOverflow .note:last-child{
+  margin-bottom: 0;
+}
+
+.notes > .note{
+  position: relative;
+}
+.notesOverflow > .note{
+  position: relative;
+}
+
+.note::before{
+  content: attr(data-count);
+  position: absolute;
+  width: fit-content;
+  font-style: normal;
+}
+
+.note{
+  display: block;
+  /*text-indent: -11px;*/
+  font-family: "SpaceMonoCustom";
+  font-style: italic;
+  /*text-align: center;*/
+  font-size: 7pt;
+  word-spacing: -1px;
+  line-height: 12px;
+  position: absolute;
+  word-break: break-word;
+  margin-bottom: 12px;
+}
+
+.note em{
+  font-family: "SpaceMonoCustom";
+  font-style: normal;
+  word-spacing: -1px;
+  font-size: 7pt;
+  text-decoration: underline;
+}
+/*
+.note + .note {
+  margin-top: 12px;
+}*/
+
+.hard_page_break{
+  page-break-before: always;
+}

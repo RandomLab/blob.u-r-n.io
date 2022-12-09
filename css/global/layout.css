@@ -1,0 +1,225 @@
+@media print {
+
+    /* ALL PAGES ----------------------------------------------------------------------- */
+
+    @page {
+        --bordsperdus: 1cm;
+        --grid: 18px;
+        /*size: calc(120mm + var(--bordsperdus)) calc(180mm + var(--bordsperdus));*/
+        size:152.4mm 228.6mm;
+        /*margin-top: calc(var(--grid) * 1.5);*/
+        margin-top: 14.3mm;
+        margin-bottom: 68px;
+        /*background: repeating-linear-gradient(white, white calc(var(--grid) - 1px), #9198e5 var(--grid), #9198e5 var(--grid));*/
+        /*marks: crop;
+        bleed: 1cm;*/
+
+        /*
+        outline:1px solid black;
+        outline-offset: -1px;
+        */
+    }
+
+
+    /* LEFT PAGES ---------------------------------------------------------------------- */
+
+    @page :left {
+        margin-left: 14.5mm;
+        margin-right: 90px;
+
+        @bottom-center{
+            content: counter(page);
+            font-family: 'Inknut Antiqua';
+            font-size:12pt;
+            padding-bottom: 5mm;
+            color:white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            align-items: flex-end;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+
+    /*  running header (book title)
+        way 1 : keep HTML element and style inside the running header, remove the element from the flux  */
+    #booktitle {
+        font-size: 12pt;
+        /*position: running(booktitle);*/
+        font-family: 'Pagul', sans-serif;
+        /* font-weight: 600; */
+        text-indent: 0;
+    }
+
+
+    /* RIGHT PAGES --------------------------------------------------------------------- */
+
+    @page :right {
+        margin-left: 90px;
+        margin-right: 14.5mm;
+
+        /* page number */
+        @bottom-center {
+          content: counter(page);
+          font-family: 'Inknut Antiqua';
+          font-size:12pt;
+          padding-bottom: 5mm;
+          color: white;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;
+          align-items: flex-end;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        @bottom-right-corner {
+          content: string(chapTitle);
+          font-family: "SpaceMonoCustom";
+          font-size: 8pt;
+          right: 8mm;
+          position: absolute;
+          bottom: 8mm;
+          text-align: right;
+          width: 70mm;
+        }
+    }
+
+    @page cover{
+      display: flex;
+      height: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    /*  running header (book title)
+        way 2 : copy an HTML element into running header, don't keep HTML and style  */
+
+    .runningTitle { string-set: chapTitle content(text); }
+
+    /* PAGE BREAKS --------------------------------------------------------------------- */
+
+    #halftitle,
+    #toc,
+    #prefatory-note,
+    #request-for-comments,
+    #toc {
+        break-before: right;
+    }
+
+    #toc ul li a {
+        text-decoration: none;
+    }
+
+    #toc a:visited{
+      color:white;
+      -webkit-text-stroke-width: 0.9px;
+      -webkit-text-stroke-color: black;
+    }
+
+    .chapter {
+        break-before: left;
+    }
+
+    img{
+      filter: grayscale(100%);
+    }
+
+    figure {
+        break-inside: avoid;
+        /* width: 80%; */
+    }
+
+    #colophon {
+        break-before: right;
+        break-after: left;
+    }
+
+
+    /* BLANK PAGES --------------------------------------------------------------------- */
+
+    @page :blank {
+
+        @bottom-right-corner{
+          content:none;
+        }
+
+    }
+
+
+    /* NAMED PAGE (chapter) ------------------------------------------------------------ */
+
+    .chapter { page: chapter; }
+    .subchapter { page: subchapter; }
+    @page subchapter :first {
+        @bottom-right-corner { content: none; }
+    }
+
+    @page:nth(7){
+      @bottom-center{
+        content:"DOL";
+        -webkit-text-stroke-width:0.1px;
+        -webkit-text-stroke-color: white;
+        color: black;
+        font-weight: lighter;
+        font-size: 13.5pt;
+      }
+    }
+
+    @page:nth(3){
+      @bottom-center{
+        content:none;
+      }
+    }
+
+    @page:nth(190){
+      @bottom-center{
+        content:none;
+      }
+    }
+
+    @page:nth(189){
+      @bottom-right-corner{
+        content:none;
+      }
+    }
+
+    /* WIDOWS AND ORPHANS -------------------------------------------------------------- */
+
+    /*
+    - Not specific to paged.js
+    - Support only on Chrome/Chromium
+    */
+    #request-for-comments p, .chapter p {
+        widows: 3;
+        orphans: 3;
+    }
+
+
+    /* HYPHENS ------------------------------------------------------------------------- */
+
+     /*
+    - Not specific to paged.js
+    - Support only on Chrome/Chromium with OSX and on Firefox with Linux
+    */
+    p{
+      /*
+      hyphens: none;
+       -ms-hyphens: none;
+       -moz-hyphens: none;
+       -webkit-hyphens: none;
+       */
+
+       hyphens: manual;
+        -ms-hyphens: manual;
+        -moz-hyphens: manual;
+        -webkit-hyphens: manual;
+    }
+
+    em{
+      hyphens: none;
+    }
+     /* select the last page of the document  */
+     .pagedjs_page:last-of-type{ }
+
+
+
+}

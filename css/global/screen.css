@@ -1,0 +1,440 @@
+@media screen and (min-width: 768px) {
+  #toc{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    z-index: 3;
+    line-height: auto;
+    height: 100vh;
+    overflow-y: auto;
+    padding-right: 1em;
+  }
+  #toc li,#toc-nav li{
+    line-height: 1.2rem;
+  }
+  #toc a, #toc-nav li{
+    line-height: 1.2rem;
+  }
+  body{
+    max-width: 60vw;
+    padding-left: 30vw;
+  }
+
+  .runningTitle{
+    width: 100%;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+  }
+
+
+
+  :root {
+      --lineheight: 1.8rem;
+  }
+
+  #note-liminaire >p {
+    font-size: 1.7rem;
+  }
+  #note-liminaire > p > code{
+    font-size: 2.2rem;
+  }
+
+  p, h6, li, .zocco code, #courriel-du-coeur p{
+    font-size: 1.4rem;
+  }
+
+  .zocco pre code{
+    line-height: 1.5rem!important;
+  }
+
+  .article h6{
+    font-size: 1.7rem;
+  }
+
+  .interview > p, .interview > p em, .interview li{
+    font-size: 1.5rem;
+    word-spacing: -0.3rem;
+  }
+
+  .interview blockquote > p, h3{
+    font-size: 2rem;
+  }
+
+  h2{
+    font-size: 3rem;
+  }
+
+  .decoration{
+    font-size: 2rem;
+  }
+  .note_call{
+    font-size: 1rem;
+  }
+  .note, .note em, .article figcaption, .article cite, author > span, cite{
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .
+}
+@media screen and (min-width: 1200px) {
+  body{
+    /*padding-left: calc((100vw - 45rem)/2);
+    max-width: 45rem;*/
+    max-width: 40%;
+    padding-left: 30%;
+  }
+  #toc{
+    max-width: calc((100vw - 50rem)/2);
+  }
+}
+@media screen and (max-width: 768px){
+  body{
+    width: 96vw;
+    margin-left: 2vw;
+  }
+  :root {
+    --lineheight: 1.4rem;
+  }
+
+  #note-liminaire >p {
+    font-size: 1.2rem;
+  }
+  #note-liminaire > p > code{
+    font-size: 1.8rem;
+  }
+
+  p, h6, li, .zocco code{
+    font-size: 1.1rem;
+  }
+
+  .interview > p, .interview > p em, .interview li{
+    font-size: 1.1rem;
+    word-spacing: -0.3rem;
+  }
+
+  .interview ul{
+    margin-left: 1.5rem;
+  }
+
+  .interview blockquote > p, h3{
+    font-size: 1.5rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  .decoration{
+    font-size: 1.5rem;
+  }
+
+  .note_call{
+      font-size: 1rem;
+  }
+
+  .note, cite, author > span, .note em{
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .runningTitle{
+    width: 90vw;
+    padding-left: 10vw;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.8),rgba(255,255,255,0));
+  }
+  #toc-nav{
+    position: fixed;
+    top:0;
+    right: 100vw;
+    background-color:white;
+    z-index: 3;
+    width: auto;
+    padding-right: 1rem;
+    overflow-y: scroll;
+    height: 95vh;
+    padding-top: 5vh;
+  }
+  .nav-displayed{
+    right: 0!important;
+  }
+}
+
+
+/*for all*/
+
+html{
+  width: 100%;
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: white;
+}
+
+#cover{
+  position: relative;
+  height: 100vh;
+}
+#cover .container, #cover main{
+  height: auto;
+}
+#cover .content{
+  margin-top: 5vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+}
+
+.blague{
+  margin-bottom: 25vh;
+  margin-top: 0;
+}
+
+.interview h6 {
+  text-align: center;
+  text-indent: 0;
+}
+
+*{
+  hyphens: none;
+}
+
+.article > p {
+  hyphens: none;
+  text-align: left;
+}
+
+.fiction {
+  column-count: unset;
+  white-space: normal;
+}
+.fiction > p{
+  width: 74%;
+  margin-bottom: var(--lineheight);
+}
+
+.runningTitle{
+  transition: top 0.3s;
+  font-size: 2rem;
+  font-family: 'Inknut Antiqua', sans-serif;
+  font-weight: bold;
+  hyphens: none;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 0.9px;
+  -webkit-text-stroke-color: black;
+  color: white;
+  margin: 0;
+  text-align: center;
+  left: 0;
+  top:0;
+  line-height: 2rem;
+  height: 5vh;
+}
+
+.article cite{
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+
+.note{
+  position: relative;
+  width: 99%;
+}
+
+#footnotes{
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  z-index: 2;
+  box-shadow: white 0px -11px 12px;
+}
+
+.footnotes{
+  display: none;
+}
+
+.notes, .article .notes{
+  position: relative;
+  width: 100%;
+}
+
+blockquote p + p {
+  margin-top: calc(var(--lineheight) * -1);
+}
+
+hr{
+  margin-bottom: var(--lineheight)!important;
+}
+
+.subchapter, #colophon{
+  margin-top: 25vh;
+}
+
+a:visited {
+  -webkit-text-stroke-width: 0.9px;
+  -webkit-text-stroke-color: #4b2f89;
+  color: white;
+}
+
+img, figure img, figure{
+  margin-left: auto;
+  margin-right: auto;
+  filter: grayscale();
+}
+
+#la-mort-du-soleil{
+  position: relative;
+}
+
+section[id="des-choses-qui-attendent-de-nous-;-totems-et-intelligences-artificielles"] .vertical{
+  margin-bottom: calc(var(--lineheight) * -3);
+}
+
+img[src="images/Fabrice/iso-document-s2.jpg"]{
+  margin-bottom: var(--lineheight)!important;
+}
+
+section[id="coco’s-memories"] h6 {
+  text-align: center;
+
+}
+
+.article > p , .fiction > p{
+  width: 100%;
+}
+
+.toc-authors{
+  position: relative;
+}
+
+.vertical{
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+.is-active{
+  display: block;
+  bottom: 0;
+}
+
+.is-scrolled{
+  display: block;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+.nav-up {
+  top:-10vh;
+}
+
+.is-reading{
+  text-decoration: underline solid black;
+}
+
+.article-footer-wrapper{
+  position: fixed;
+  bottom: 0;
+}
+
+#toc-button{
+  font-family: "Inknut Antiqua";
+  font-weight: bold;
+  background: none;
+  font-size: 1.5rem;
+  width: 10vw;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  z-index: 4;
+}
+
+
+#toc-nav a[href]::after {
+    content: target-counter(attr(href), page);
+    float: right;
+}
+
+
+#toc-nav li{
+    /*overflow-x: hidden;*/
+    margin-left: 2rem;
+    text-indent: -2rem;
+}
+
+#toc-nav li::after{
+    content: "";
+    float: left;
+    width: 0;
+    padding-left: 5px;
+    letter-spacing: 2px;
+    top:0;
+}
+
+
+#toc-nav li a::after{
+    position: absolute;
+    right: 0;
+    /* background-color: #f8f2ec; */
+    padding-left: 6px;
+}
+
+#toc-nav li a{
+    right: 0;
+
+}
+
+#toc-nav ul {
+    list-style: none;
+}
+
+#toc-nav a{
+  font-size: 12pt;
+  line-height: var(--lineheight);
+}
+#toc-nav li{
+  margin-bottom: 0;
+  font-size: 15pt;
+  font-family: 'Inknut Antiqua', sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  hyphens: none;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 0.9px;
+  -webkit-text-stroke-color: black;
+  color: white;
+  position: relative;
+}
+
+/* list-counter */
+#toc-nav { counter-reset: numtoc; }
+#toc-nav .chap { counter-increment: numtoc; }
+
+
+#toc-nav a span{
+  display: block;
+  text-transform: none;
+  text-align: right;
+  font-weight: normal;
+  -webkit-text-stroke-width: 0px;
+  color: black;
+}
+
+#toc-nav li{ margin-bottom: calc(var(--baseline)*1); }
+
+
+/*lazyload*/
+
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+/* Fixes Firefox anomaly during image load */
+@-moz-document url-prefix() {
+    img:-moz-loading {
+        visibility: hidden;
+    }
+}

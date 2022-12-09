@@ -1,0 +1,25 @@
+/* FIGURES ---------------------------------------------------- */
+
+section[data-id="angoisse-universelle"]{
+  width: 103%;
+  margin-left: -1.5%;
+  margin-top: -2.5%;
+}
+#angoisse-universelle > h2, #angoisse-universelle > hr{
+  display: none;
+}
+
+#angoisse-universelle > .authors {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  top:0;
+}
+
+
+section[data-id="percy,-brain-he-has-~~nix~~-now"] img[src="images/brainiac/page_10.png"]{
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+}

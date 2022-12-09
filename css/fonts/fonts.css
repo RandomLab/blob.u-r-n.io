@@ -1,0 +1,41 @@
+@font-face {
+ font-family: "SpaceMonoCustom";
+ src: url("SpaceMonoCustom-Italic.otf") format("opentype");
+ font-weight: normal;
+ font-style: italic;
+}
+@font-face {
+ font-family: "SpaceMonoCustom";
+ src: url("SpaceMonoCustom-BoldItalicCustom.otf") format("opentype");
+ font-weight: bold;
+ font-style: italic;
+}
+@font-face {
+ font-family: "SpaceMonoCustom";
+ src: url("SpaceMono-Regular.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: "Inknut Antiqua";
+ src: url("InknutAntiqua-Medium.ttf") format("truetype");
+ font-weight: 500;
+}
+
+@font-face {
+ font-family: "Inknut Antiqua";
+ src: url("InknutAntiqua-Bold.ttf") format("truetype");
+ font-weight: 600;
+}
+
+@font-face {
+ font-family: "Inknut Antiqua";
+ src: url("InknutAntiqua-Light.ttf") format("truetype");
+ font-weight: 200;
+}
+
+@font-face  {
+  font-family: "Roboto";
+  src: url("Roboto-Light.ttf") format("truetype");
+}
